@@ -1,4 +1,4 @@
-# Dead Man's Safe Module (Contracts)
+# Morsera Contracts
 
 A `DeadManSwitch` can be added to Gnosis Safes to allow them to execute arbitrary transactions at some time in the future. 
 This set time can be a specific timestamp, or it can be a timeout from the last Safe tx.
@@ -14,11 +14,8 @@ A Gnosis Safe Guard is a contract that is called prior to any Safe transaction t
 The `DeadManSwitch` contract is both a module and a guard. It must be a module in order to execute transactions on the Safe's behalf.
 It must be a guard in order to keep track of the safe's last transaction timestamp.
 
-## Features
+## Running Tests
 
-## Architecture Overview
+make sure you have the `RPC_URL` environment variable set to an appropriate RPC. The network must have safe contracts deployed to it.
 
-### `DeadManSwitch`
-### `DeadManSwitchFactory`
-
-## TODO
+`make fork-test`
